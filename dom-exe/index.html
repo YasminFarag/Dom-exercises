@@ -33,6 +33,12 @@
             margin-right: 30px;
             padding: 5px
         }
+
+        #boxes{
+            margin: 30px;
+            margin-top: 20px
+        }
+    
     </style> 
 
 </head>
@@ -50,9 +56,27 @@
     <p>The Result is :</p>
      <div id="calc"></div> 
 
+     <hr>
+<!-- second exercise -->
+<!-- Create three options of check-boxes (three colors/fruit etc options) using the DoM. Then use a switch statement to give an alert depending on which option the user selects. Example: You clicked "strawberry!" Yum! -->
+<br>
+<h2>Second Exercise</h2>
+<span id="boxes">
+<button id="banana" onclick="press()">banana</button>
+<button id="mango" onclick="press()">mango</button>
+<button id="watermelon" onclick="press()">watermelon</button>
+</span>
+<br><br><br>
+<hr>
+<!-- Create a program to calculate the volume of a sphere. The user input should include "radius" and a "calculate" button. The user should also see the result of the sphere volume. -->
 
+Radius: <br>
+<input type="number" id="radius"><br>
+Volume: <br>
+<input type="number" id="volume"><br>
+<br>
+<button id="press">Calculate</button>
 
-
-<script src="dom1-exe.js"></script>
+<script src="exercises.js"></script>
 </body>
 </html>
