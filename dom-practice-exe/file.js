@@ -37,10 +37,13 @@ lastItem.style.backgroundColor= 'red'
 
 // 6. Add the class main to the div with a class of footer.
 
-// let addedClass = document.getElementsByClassName('footer');
-//     addedClass.classList.add('main');
+let addedClass = document.querySelector('.footer');
+    addedClass.classList.add('main');
 
+// 7. Remove the class main on the div with a class of footer.
 
+let removed = document.querySelector('.main')
+removed.classList.remove('main')
 // 8. Create a new li element
 let newLi = document.createElement('li');
 // 9. Give the li the text "four"
