@@ -58,4 +58,19 @@ function multiply(){
     
     document.getElementById('calculate').onsubmit = sphereVolume
 
-    
+    // BOnus question
+
+    function highlight(){
+        let highlighted= document.getElementsByTagName('strong');
+        for(let i =0; i<highlighted.length; i++){
+            highlighted[i].style.color= 'green'
+        }
+    }
+
+    function returnBack(){
+        let highlighted= document.getElementsByTagName('strong');
+        for(let i =0; i<highlighted.length; i++){
+            highlighted[i].style.color= 'black'
+        }
+
+    }
