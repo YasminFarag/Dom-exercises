@@ -58,6 +58,15 @@ function multiply(){
     
     document.getElementById('calculate').onsubmit = sphereVolume
 
+    
+    // width and height
+
+
+    function widthHeight(){
+        let width = window.innerWidth;
+        let height= window.innerHeight;
+        let result = document.getElementById('cal').textContent = `width : ${width} - height : ${height}`
+    }
     // BOnus question
 
     function highlight(){
