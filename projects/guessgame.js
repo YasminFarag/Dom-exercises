@@ -29,44 +29,49 @@
 // }
 // guessingGame()
 
-
-
 // solution 
 
 let randomNum= Math.floor(Math.random()* 10 +1)
     //console.log(randomNum);
 
-   //let myButton = document.querySelector('button') 
-document.getElementById('button').onclick= function(){
-    let GuessNumber = randomNum
-
+    let heading = document.querySelector('.header')
+    let p = document.querySelector('.paragraph')
     let counter = 1;
+   function guessingGame(){
 
-    //let guess = parseInt(prompt('Please enter a number from 1-10'))
-    //let guess= document.querySelector('#iteminput').value
+ 
 
+   
+    let userInput= document.querySelector('#iteminput').value;
+   
 
-
-    var userInput= document.getElementById('iteminput');
-    while(userInput != GuessNumber && counter < 3){
-        //userInput= ('incorrect number! please try again')
-        let heading = document.getElementsByClassName('header')
+    if(userInput == randomNum && counter < 3) {
+        heading.textContent= 'Success!!!';
+        p.textContent= `the number is ${randomNum} ,You got the number correctly after ${counter} attempts`  
+       
+    } 
+    
+    
+    else if(userInput != randomNum && counter < 3){   
         heading.textContent= 'Wrong!!!';
-        let p = document.getElementsByTagName('p')
-        p.textContent= 'Try again! You have 2 attempts left'
-
-
+        p.textContent= `Try again! You have ${3-counter} attempts left`;
         counter ++
+    }else{
+        heading.textContent= 'Sorry!!!'; 
+        p.textContent= ` You couldn't guess the number, the number was ${randomNum}`;
+        counter++
     }
+};
 
-    if(userInput === GuessNumber && counter < 3){
-        heading.textContent= 'you did it !';
-        
-    }else {
-        heading.textContent= 'Hard Luck!';
-        
-    }
 
-}
 
-//numberGenerator()
+//let guess = parseInt(prompt('Please enter a number from 1-10'))
+    //let guess= document.querySelector('#iteminput').value
+  
+    //  while(userInput != GuessNumber && counter < 3){
+    // counter ++
+    // l
+    //  }
+
+
+    
