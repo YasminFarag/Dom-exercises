@@ -39,7 +39,9 @@ ul.remove() */
 
 ul.addEventListener('click', (event)=>{
     console.log(event.target);
-    
+    if(event.target.nodeName == 'LI')
+    event.target.style.textDecoration= 'line-through';
+
 })
 
 
