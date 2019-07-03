@@ -42,7 +42,7 @@ let randomNum= Math.floor(Math.random()* 10 +1)
  
 
    
-    let userInput= document.querySelector('#iteminput').value;
+    let userInput= document.querySelector('#iteminput');
    
 
     if(userInput == randomNum && counter < 3) {
