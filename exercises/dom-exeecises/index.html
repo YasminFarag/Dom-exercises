@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>first-exercises</title>
+
+<style>
+        body{
+            background-color: lightgray;
+            margin: 40px;
+        }
+
+        form {
+            margin : 20px;
+            padding: 20px;
+           
+
+        }
+
+        #firstnumber{
+            margin: 35px;
+            padding: 5px
+        }
+
+        #secondnumber{
+            margin: 20px;
+            padding: 5px;
+        }
+
+        button{
+            margin-right: 30px;
+            padding: 5px
+        }
+
+        #boxes{
+            margin: 30px;
+            margin-top: 20px
+        }
+    
+    </style> 
+
+</head>
+<body>
+
+    <h1>first exercise: Calculation</h1>
+
+    first Number : <input type="number" id="firstnumber"> <br>
+    second Number : <input type="number" id="secondnumber"> <br>
+    <br><br>
+
+    <button onclick="multiply()">Multiply</button> 
+    <button onclick ="divide()">Divide</button> 
+
+    <p>The Result is :</p>
+     <div id="calc"></div> 
+
+     <hr>
+<!-- second exercise -->
+<!-- Create three options of check-boxes (three colors/fruit etc options) using the DoM. Then use a switch statement to give an alert depending on which option the user selects. Example: You clicked "strawberry!" Yum! -->
+<br>
+<h2>Second Exercise</h2>
+<span id="boxes">
+<button id="banana" onclick="press()">banana</button>
+<button id="mango" onclick="press()">mango</button>
+<button id="watermelon" onclick="press()">watermelon</button>
+</span>
+<br><br><br>
+<hr>
+<!-- Create a program to calculate the volume of a sphere. The user input should include "radius" and a "calculate" button. The user should also see the result of the sphere volume. -->
+<br>
+Radius: <br>
+<input type="number" id="radius"><br>
+Volume: <br>
+<input type="number" id="volume"><br>
+<br>
+<button id="press" onclick="sphereVolume()">Calculate</button>
+
+
+     <div id="calculate"></div> 
+     <br>
+     <hr>
+
+
+     <!--  Height & Width
+ Create a program to get the width and height of the window (any time the window is resized). Show the result on the browser. -->
+<!-- Bonus *** Create a program to highlight the bold words of the following paragraph when the user mouses over the link -->
+
+<p>width and height of a window browser</p>
+<button onclick="widthHeight()">Click Me</button>
+
+<p id="cal"></p>
+<br>
+<hr>
+<p><a href="#" onmouseover="highlight()" onmouseout="returnBack()">When the user mouses over THIS link, the bold words of the following paragraph will be highlighted</a></p>
+
+<p>Lorem <strong>ipsum</strong> dolor sit <strong>amet</strong> consectetur adipisicing <strong>elit</strong>. Incidunt reiciendis <strong>officiis</strong> quis magni <strong>doloribus</strong> vero enim <strong>nisi</strong> magnam fugit a.</p>
+
+<script src="exercises.js"></script>
+</body>
+</html>
