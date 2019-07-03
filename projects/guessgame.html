@@ -6,9 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess Game</title>
 </head>
+<style>
+    body{
+        margin-top: 150px; 
+        text-align: center;
+        background-color: #f4f4f4;
+    }
+
+    .header{
+        font-size: 80px
+    }
+
+    p{
+        font-size: 25px;
+    }
+
+    input{
+        width:400px;
+        height: 35px; 
+    }
+    button {
+        width: 150px;
+        height: 40px;
+        background-color: blueviolet;
+
+    }
+
+    /* .container{
+        background-color: #f4f4f4;
+        width:100%;
+        height: 400px;
+    } */
+</style>
 <body>
+    <div class="container">
+    <h1 class="header">Guess Me!</h1>
+    <p>
+        I'm thinking of a number between 1 and 10, can you guess it? </p>
+    <input type="number" placeholder="Your guess goes here...">
+    <button id="button">Guess</button>
 
-
-    <script src="file.js"></script>
+</div>
+    <script src="guessgame.js"></script>
 </body>
 </html>
