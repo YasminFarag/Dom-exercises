@@ -20,19 +20,26 @@ button.addEventListener('click', ()=>{
 
 
 
-const listedItems= document.querySelectorAll('li');
+// const listedItems= document.querySelectorAll('li');
 
-listedItems.forEach(item =>{
-    item.addEventListener('click',(event)=>{
-        event.target.style.textDecoration= 'line-through';
-        //event.target.remove(); // will remove each element will be selected
+// listedItems.forEach(item =>{
+//     item.addEventListener('click',(event)=>{
+//         event.target.style.textDecoration= 'line-through';
+//         //event.target.remove(); // will remove each element will be selected
+
         
-    })
-}) ;
+//     })
+// }) ;
 
 // to remove an element from DOM
 
 /* const ul = document.querySelector('ul')
 ul.remove() */
+
+
+ul.addEventListener('click', (event)=>{
+    console.log(event.target);
+    
+})
 
 
