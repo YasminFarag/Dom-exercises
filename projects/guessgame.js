@@ -34,32 +34,39 @@
 // solution 
 
 let randomNum= Math.floor(Math.random()* 10 +1)
+    //console.log(randomNum);
 
-
-    console.log(randomNum);
-
-    
-function numberGenerator(){
-    let userGuess = randomNum
+   //let myButton = document.querySelector('button') 
+document.getElementById('button').onclick= function(){
+    let GuessNumber = randomNum
 
     let counter = 1;
 
-    let guess = parseInt(prompt('Please enter a number from 1-10'))
+    //let guess = parseInt(prompt('Please enter a number from 1-10'))
+    //let guess= document.querySelector('#iteminput').value
 
-    while(guess != userGuess && counter < 3){
-        guess= prompt('incorrect number! please try again')
+
+
+    var userInput= document.getElementById('iteminput');
+    while(userInput != GuessNumber && counter < 3){
+        //userInput= ('incorrect number! please try again')
+        let heading = document.getElementsByClassName('header')
+        heading.textContent= 'Wrong!!!';
+        let p = document.getElementsByTagName('p')
+        p.textContent= 'Try again! You have 2 attempts left'
+
 
         counter ++
     }
 
-    if(guess === userGuess && counter < 3){
-        console.log('you did it !');
+    if(userInput === GuessNumber && counter < 3){
+        heading.textContent= 'you did it !';
         
     }else {
-        console.log('Hard Luck!');
+        heading.textContent= 'Hard Luck!';
         
     }
 
 }
 
-numberGenerator()
+//numberGenerator()
