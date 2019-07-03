@@ -64,14 +64,7 @@ let randomNum= Math.floor(Math.random()* 10 +1)
 };
 
 
-
-//let guess = parseInt(prompt('Please enter a number from 1-10'))
-    //let guess= document.querySelector('#iteminput').value
-  
-    //  while(userInput != GuessNumber && counter < 3){
-    // counter ++
-    // l
-    //  }
-
-
+function restart(){
+    location.reload()
+}
     
