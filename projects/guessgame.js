@@ -32,7 +32,7 @@
 // solution 
 
 let randomNum= Math.floor(Math.random()* 10 +1)
-    //console.log(randomNum);
+    console.log(randomNum);
 
     let heading = document.querySelector('.header')
     let p = document.querySelector('.paragraph')
@@ -66,5 +66,9 @@ let randomNum= Math.floor(Math.random()* 10 +1)
 
 function restart(){
     location.reload()
+
+
 }
+
+
     
