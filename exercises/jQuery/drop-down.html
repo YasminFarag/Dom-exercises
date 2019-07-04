@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop Down</title>
+</head>
+<style>
+    ul{
+        list-style-type: none;
+       
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+
+    }
+li{
+    display: inline;
+}
+
+
+</style>
+<body>
+
+    <h1>Christopher Nolan's Movies</h1>
+    <!-- <div class="navbar">
+        <a href="#home">The Prestige</a>
+        <a href="#home">Momento</a>
+        <a href="#home" class="dropdown">Interstellar</a>
+        <a href="#home">Dark Knight</a>
+    </div> -->
+
+
+    <ul>
+            <li><a href="#home">The Prestige</a></li>
+            <li><a href="#news">Inception</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Interstellar</a>
+              <div class="dropdown-content">
+                <a href="#">Leonardo</a>
+                <a href="#">Tom Hardy</a>
+                <a href="#">Ken Watanabe</a>
+              </div>
+            </li>
+            <li><a href="#news">Momento</a></li>
+          </ul>
+    
+</body>
+</html>
