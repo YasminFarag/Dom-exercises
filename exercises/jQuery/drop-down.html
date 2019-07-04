@@ -19,37 +19,31 @@
 }
 #mainul>li{
     width: 200px;
+    height: 150px
     
 }
 
 a{
     text-decoration: none;
     color: white;
+    font-size: 30px
 }
 
-.dropdown-content{
-    margin: 15px
+.dropdown-content>a{
+    margin: 15px;
+    font-size: 20px
 }
 
 </style>
 <body>
 
     <h1>Christopher Nolan's Movies</h1>
-    <!-- <div class="navbar">
-        <a href="#home">The Prestige</a>
-        <a href="#home">Momento</a>
-        <a href="#home" class="dropdown">Interstellar</a>
-        <a href="#home">Dark Knight</a>
-    </div> -->
-
-
     <ul id="mainul">
             <li><a href="#home">The Prestige</a></li>
             <li><a href="#news">Inception</a></li>
             <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">Interstellar</a>
-              <ul class="dropdown-content">
-
+              <a href="#home" class="dropbtn">Interstellar</a>
+              <ul onclick='press()'class="dropdown-content">
                 <a href="#">Leonardo</a>
                 <a href="#">Tom Hardy</a>
                 <a href="#">Ken Watanabe</a>
