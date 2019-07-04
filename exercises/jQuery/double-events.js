@@ -6,12 +6,16 @@
 $('#btn').html('Welcome! Stay forever')
 $('#btn').css('background-color','red')
 $('#btn').css('height','50px')
+$('#btn').css('font-size', '30px')
+$('#btn').css('margin-left', '300px')
 
 
 $('#btn').click(function(){
    $('#btn').css({
        'color' :'white',
-       'margin-right': '50px'
+       'margin-right': '50px',
+       'height' :'80px',
+       
         
    })
 })
@@ -23,12 +27,8 @@ $(document).ready(function(){
         } else if(e.type === 'mouseleave'){
             $('#btn').html('just put the mouse over me!')
         }else{
-            $('#btn').css('color','black')
+            $('#btn').css('color','blue')
         }
         console.log(e.type);
-        
-            
-        
-
     })
 })
