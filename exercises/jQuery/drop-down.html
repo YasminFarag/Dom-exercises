@@ -39,27 +39,20 @@ a{
 }
 
 .dropdown-content{
-    display: none;
+   display: none;
     position: absolute;
     z-index: 1;
-background-color:black;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:black;
+    width: 100%;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 }
 
-.dropdown .dropbtn{ 
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+.dropdown-content.show{
+    display: block;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
+.dropdown{
+    position: relative;
 }
 
 
@@ -67,19 +60,19 @@ background-color:black;
 <body>
 
     <h1>Christopher Nolan's Movies</h1>
-    <ul id="mainul" class="mymenu">
-            <li><a href="#home">The Prestige</a></li>
-            <li><a href="#news">Inception</a></li>
+    <ul id="mainul">
+            <li>The Prestige</li>
+            <li>Inception</li>
             <li class="dropdown">
-              <a href="#home" class="dropbtn">Interstellar</a>
-              <ul onclick='press()'class="dropdown-content">
+              Interstellar
+              <ul class="dropdown-content">
                 <a href="#">Leonardo</a>
                 <a href="#">Tom Hardy</a>
                 <a href="#">Ken Watanabe</a>
               </ul>
             </li>
-            <li><a href="#news">Momento</a></li>
+            <li>Momento</li>
           </ul>
-    
+          
 </body>
 </html>

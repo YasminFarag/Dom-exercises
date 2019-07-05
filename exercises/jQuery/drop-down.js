@@ -1,4 +1,4 @@
-function press(){
+/* function press(){
     let drop= document.querySelector('#mainul')
 //     drop.addEventListener('mouseover', function(e){
 //         if(e.type=== 'mouseover'){
@@ -15,14 +15,14 @@ function press(){
         drop.className = 'mymenu'
     }
 }
-
-
-/* function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
  */
+
+
+
+  document.querySelector('.dropbtn').addEventListener('click',openMenu)
+
+  function openMenu(){
+      document.getElementsByClassName('dropdown-content').classList.toggle('show')
+
+
+  }
