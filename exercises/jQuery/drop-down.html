@@ -38,11 +38,36 @@ a{
     
 }
 
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+background-color:black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown .dropbtn{ 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
 </style>
 <body>
 
     <h1>Christopher Nolan's Movies</h1>
-    <ul id="mainul">
+    <ul id="mainul" class="mymenu">
             <li><a href="#home">The Prestige</a></li>
             <li><a href="#news">Inception</a></li>
             <li class="dropdown">
