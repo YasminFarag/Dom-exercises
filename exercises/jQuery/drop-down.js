@@ -19,10 +19,10 @@
 
 
 
-  document.querySelector('.dropbtn').addEventListener('click',openMenu)
+  document.querySelector('.dropdown').addEventListener('mouseover',openMenu)
 
   function openMenu(){
-      document.getElementsByClassName('dropdown-content').classList.toggle('show')
+      document.querySelector('.dropdown-content').classList.toggle('show')
 
 
   }
