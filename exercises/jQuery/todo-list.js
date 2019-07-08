@@ -18,16 +18,14 @@ button.addEventListener('click',()=>{
     ul.textContent= 'new Tasks'
     myCont.appendChild(ul)
     document.body.appendChild(myCont) */
-
+let listed= document.getElementById('list')
     let listedItem= document.createElement('li')
    
     listedItem.textContent= document.querySelector('#textInput').value
 
-    myCont.appendChild(listedItem)
+    listed.appendChild(listedItem)
 
-    document.body.appendChild(myCont)
-
-
+    //document.body.appendChild(listed)
 
     // delete button
 
@@ -37,29 +35,12 @@ button.addEventListener('click',()=>{
         delBtn.className= 'delete'
 
         listedItem.appendChild(delBtn);
-        document.body.appendChild(listedItem)
+        //document.body.appendChild(listed)
 
 
-    let clickOnBtn = document.getElementsByClassName('delete')
+    let clickOnBtn = document.querySelector('.delete')
+  clickOnBtn.addEventListener('click',()=>{
+    listed.removeChild(listedItem)
 
+  })
 });
-
-
-
-
-
-
-
-
-
-
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
