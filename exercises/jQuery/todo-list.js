@@ -27,6 +27,8 @@ let listed= document.getElementById('list')
 
     //document.body.appendChild(listed)
 
+
+
     // delete button
 
 
@@ -35,12 +37,31 @@ let listed= document.getElementById('list')
         delBtn.className= 'delete'
 
         listedItem.appendChild(delBtn);
+
+        
         //document.body.appendChild(listed)
 
 
-    let clickOnBtn = document.querySelector('.delete')
-  clickOnBtn.addEventListener('click',()=>{
-    listed.removeChild(listedItem)
+    /* let clickOnBtn = document.querySelector('.delete')
 
-  })
+    console.log(clickOnBtn);
+    clickOnBtn.addEventListener('click',()=>{
+
+        listed.removeChild(listedItem)
+
+  })*/
+
+  $(document).ready(function(){
+    $('.delete').click(function(){
+
+        $(listedItem).hide();
+    });
 });
+});
+
+
+
+
+
+
+
