@@ -11,10 +11,10 @@ button.addEventListener('keypress',(e)=>{
 }); */
 
 let button = document.querySelector('#btn');
-myCont = document.querySelector('.container')
+myCont = document.querySelector('.main')
 button.addEventListener('click',()=>{
 
-
+    /* let ul= document.createElement('ul') */
     let listedItem= document.createElement('li')
    
     listedItem.textContent= document.querySelector('#textInput').value
