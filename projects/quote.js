@@ -1,3 +1,5 @@
+import {newQuote} from './modules.js';
+
 
 const quotes = [
     "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.",
@@ -16,13 +18,11 @@ const quotes = [
 
 
 
-  let button = document.querySelector('#btn').addEventListener('click',()=>{
+  let button = document.querySelector('#btn');
+  button.addEventListener('click',(e)=>{
 
-    let randomQuote = Math.floor((Math.random()* (quotes.length)))
-    console.log(randomQuote);
+    e.preventDefault();
 
-    let para= document.querySelector('#quoteoftheday').innerHTML= quotes[randomQuote]
-
-  
+    newQuote(quotes);
 
   });
