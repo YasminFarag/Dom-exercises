@@ -33,7 +33,7 @@ let listed= document.getElementById('list')
 
 
         let delBtn = document.createElement('button');
-        delBtn.textContent ='Delete'
+        delBtn.textContent ='Del'
         delBtn.className= 'delete'
 
         listedItem.appendChild(delBtn);
@@ -51,13 +51,33 @@ let listed= document.getElementById('list')
 
   })*/
 
-  $(document).ready(function(){
-    $('.delete').click(function(){
+      $(document).ready(function(){
+        $('.delete').click(function(){
 
-        $(listedItem).hide();
-    });
+            $(listedItem).hide();
+        });
+
+
+        // styling the delete button
+
+        $('.delete').css({
+            'background-color':'black',
+            'width':'30px',
+            'color':'white',
+            'margin': '15px',
+            'text-align': 'center',
+
+        });
 });
 });
+
+
+
+
+let element = document.getElementsByClassName('delete');
+element.style.color= 'red';
+
+
 
 
 
