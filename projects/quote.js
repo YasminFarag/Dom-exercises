@@ -14,24 +14,15 @@ const quotes = [
     "We cannot solve our problems with the same thinking we used when we created them."
   ];
 
-//function quote(){
+
 
   let button = document.querySelector('#btn').addEventListener('click',()=>{
 
     let randomQuote = Math.floor((Math.random()* (quotes.length)))
-
-
     console.log(randomQuote);
 
+    let para= document.querySelector('#quoteoftheday').innerHTML= quotes[randomQuote]
+
+  
+
   });
-  
-
-  
-  
-
-
-
-
-
-
-//}
