@@ -48,3 +48,36 @@ new Promise((resolve,reject)=>{
 .finally(()=>alert('promise ready'))
 .then(result=>alert(result)) // then handles the result
 .catch(err=>alert(error))    // handles the error object
+
+
+// async
+
+
+async function myFunc() {
+    let myVar= 'hello';
+    
+}
+
+myFunc().then(alert('async promise'))
+
+// await
+
+function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+        setTimeout(() =>{
+            resolve('resolved')
+        },2000)
+    });
+
+
+async function asyncCAll(){
+    console.log('calling');
+    var result= await resolveAfter2Seconds();
+    console.log(result);
+
+    // expected output: 'resolved'
+    
+    
+}
+    
+}
