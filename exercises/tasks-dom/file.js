@@ -18,7 +18,9 @@ const books = [
   
 console.log(books);
 
+// Use a ul and li to display the books.
 
+// first way to add list item 
 
 let output='';
 
@@ -26,6 +28,7 @@ for (let i = 0; i < books.length; i++) {
   
   output += '<li>' + books[i].title+ '</li>';
   output += '<li>' + books[i].author+ '</li>'
+  output += '<li>' + books[i].alreadyRead+ '</li>'
 }
 
 document.querySelector('#book').innerHTML= output;
