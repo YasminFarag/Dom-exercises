@@ -10,11 +10,17 @@ button.addEventListener('keypress',(e)=>{
 
 }); */
 
-let button = document.querySelector('#btn');
-myCont = document.querySelector('.main')
-button.addEventListener('click',()=>{
+let divider = document.querySelector('.divider')
 
-    let ul= document.createElement('ul')
+
+let button = document.querySelector('.btn');
+myCont = document.querySelector('.main')
+divider.addEventListener('click',(e)=>{
+    if(e.target.className === 'btn'){
+
+   
+
+   // let ul= document.createElement('ul')
    /*  ul.textContent= 'new Tasks'
     myCont.appendChild(ul)
     document.body.appendChild(myCont) */
@@ -25,24 +31,38 @@ let listed= document.getElementById('list')
 
     listed.appendChild(listedItem)
 
-    //styling listed item
 
-     listed.style.listStyleType= 'none';
-    listed.style.fontSize= '18px';
-    listed.style.textAlign='center';
-    listed.style.fontStyle= 'italic'
-
-    // delete button
-
-
-        let delBtn = document.createElement('button');
+    let delBtn = document.createElement('button');
         delBtn.textContent ='Remove'
         delBtn.className= 'delete'
 
         listedItem.appendChild(delBtn);
+        console.log(delBtn);
+        
+    }
+
+    if(e.target.className=== 'delete'){
+        e.target.parentElement.remove();
+    }
+});
+    //styling listed item
+/* 
+     listed.style.listStyleType= 'none';
+    listed.style.fontSize= '18px';
+    listed.style.textAlign='center';
+    listed.style.fontStyle= 'italic' */
+
+    // delete button
+
+
+       /*  let delBtn = document.createElement('button');
+        delBtn.textContent ='Remove'
+        delBtn.className= 'delete'
+
+        listedItem.appendChild(delBtn); */
 
 // vanilla js 
-    let clickOnBtn = document.querySelector('.delete')
+  /*   let clickOnBtn = document.querySelector('.delete')
 
     
 
@@ -51,17 +71,17 @@ let listed= document.getElementById('list')
 
         listed.removeChild(listed.childNodes[0]);
 
-  })
+  }) */
 
   // jQuery
 
 
-      $(document).ready(function(){
+      /* $(document).ready(function(){
         $('.delete').click(function(){
 
             $(listedItem).hide();
         }); 
-
+ */
 
         // styling the delete button
 
@@ -75,8 +95,7 @@ let listed= document.getElementById('list')
             'padding': '5px',
 
         });
-});
-});
+
 
 
 
