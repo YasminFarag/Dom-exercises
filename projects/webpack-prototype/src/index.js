@@ -1,54 +1,41 @@
 import {apiKey} from "./token";
 
+let unit= 'celsius'; // present which unit either metric or imperial
+let searchMethod; // represents either zip code or queue 
 
 
-let button= document.querySelector('#btn').addEventListener('click',()=>{
 
-// function weatherBalloon() {
-  var key = apiKey;
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=Berlin&APPID=${key}`)  
-  .then(function(resp) { return resp.json() }) // Convert data to json
-  .then(function(data) {
-    console.log(data);
+
+function searchWeather(term) {
+ let key = apiKey;
+  fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${term}&APPID=${key}`)  
+  .then(result=> { return result.json() }) // Convert data to json
+  .then(result => {
+    init(result); // calling the result from the server 
   })
   .catch(function(error) {
     // catch any errors
     console.log(error);
     
   });
+
+}
+searchWeather()
+
+function init(serverResult){
+  
+  switch(serverResult.weather[0].main){
+
+    case 'Clouds':
+    document.body.style.backgroundImage = 'url("clouds-cloudporn-weather-lookup-158163.jpeg")'
+    break;
+  }
+
+}
+ 
+
+let button= document.querySelector('.container').addEventListener('click',()=>{
+  let search = document.querySelector('.inpt').value  
+
 });
-
-//weatherBalloon()
-
-
-
-
-
-
-/* import createBanner from "./banner.js";
-
-import WebpackImg from "./webpack-logo.png"; */
-
-
-/* const createElement = message => {
-  const element = document.createElement("div");
-  element.innerHTML = message;
-  return element;
-};
-
-const createImage = image => {
-  const element = document.createElement("div");
-  const imageElement = new Image();
-  imageElement.src = image;
-  element.appendChild(imageElement);
-  return element;
-};
-
-document.body.appendChild(
-  createElement("Welcome to The weather App.")
-);
-
-document.body.appendChild(createBanner());
-document.body.appendChild(createImage(WebpackImg)); */
-
 
