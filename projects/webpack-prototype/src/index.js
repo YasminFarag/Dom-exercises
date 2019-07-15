@@ -1,9 +1,10 @@
+import {apiKey} from "./token";
+/* import createBanner from "./banner.js";
 
-import createBanner from "./banner.js";
+import WebpackImg from "./webpack-logo.png"; */
 
-import WebpackImg from "./webpack-logo.png";
 
-const createElement = message => {
+/* const createElement = message => {
   const element = document.createElement("div");
   element.innerHTML = message;
   return element;
@@ -22,4 +23,4 @@ document.body.appendChild(
 );
 
 document.body.appendChild(createBanner());
-document.body.appendChild(createImage(WebpackImg));
+document.body.appendChild(createImage(WebpackImg)); */
