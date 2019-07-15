@@ -18,8 +18,6 @@ myCont = document.querySelector('.main')
 divider.addEventListener('click',(e)=>{
     if(e.target.className === 'btn'){
 
-   
-
    // let ul= document.createElement('ul')
    /*  ul.textContent= 'new Tasks'
     myCont.appendChild(ul)
@@ -33,6 +31,8 @@ let listed= document.getElementById('list')
 
     listed.appendChild(listedItem)
 
+// delete button
+// vanilla js
 
     let delBtn = document.createElement('button');
         delBtn.textContent ='Remove'
@@ -49,18 +49,7 @@ let listed= document.getElementById('list')
 
 });
     
-
-     
-    // delete button
-
-
-       /*  let delBtn = document.createElement('button');
-        delBtn.textContent ='Remove'
-        delBtn.className= 'delete'
-
-        listedItem.appendChild(delBtn); */
-
-// vanilla js 
+ 
   /*   let clickOnBtn = document.querySelector('.delete')
 
     
