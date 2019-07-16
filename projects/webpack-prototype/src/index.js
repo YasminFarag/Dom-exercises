@@ -14,6 +14,12 @@ button.addEventListener('click', ()=>{
 
 function weatherdemo(serverRequest){
   switch(serverRequest.weather[0].main){
+
+   /*  case 'default':
+    document.body.style.backgroundImage= 'url("./src/water")
+    break; */
+
+
     case 'Clear':
     document.body.style.backgroundImage= 'url("./src/sunny.jpeg")'
     break;
@@ -64,7 +70,7 @@ humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' 
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
-image.src= 'http://openweathermap.org/img/wn/' + serverRequest.weather[0].icon + ' .png'
+// image.src= 'http://openweathermap.org/img/wn/' + serverRequest.weather[0].icon + ' .png'
 };
 
 
