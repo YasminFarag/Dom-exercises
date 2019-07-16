@@ -42,8 +42,6 @@ function weatherdemo(serverRequest){
 
     break;
   }
-
-
 console.log(serverRequest);
 
 
@@ -52,6 +50,7 @@ let weatherDescription= document.querySelector('#weatherdescription')
 let humidity= document.querySelector('#humidty');
 let tempreature= document.querySelector('#tempreature');
 let wind= document.querySelector('#wind');
+let image = document.querySelector('.img')
 
 let result = serverRequest.weather[0].description
 weatherDescription.innerText= result;
@@ -64,7 +63,12 @@ tempreature.innerHTML=Math.floor
 humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' % '
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
+
+image.src= 'http://openweathermap.org/img/wn/' + serverRequest.weather[0].icon + ' .png'
 };
+
+
+
 
 
 
