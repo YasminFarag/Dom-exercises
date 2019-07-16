@@ -1,7 +1,10 @@
+import {apiKey} from './token.js';
+
 let button = document.querySelector('#btn')
 button.addEventListener('click', ()=>{
   let city= document.querySelector('.inpt').value;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=ac731e61d18f2ff0e0c877aef04eaf71&units=metric`
+  let value = apiKey
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${value}&units=metric&units=imperial`
   fetch(url)
   .then(function(resp) { return resp.json() })
 .then(function(data) {
@@ -22,6 +25,7 @@ function weatherdemo(serverRequest){
 
     case 'Clear':
     document.body.style.backgroundImage= 'url("./src/sunny.jpeg")'
+
     break;
 
     case 'Clouds':
@@ -70,7 +74,11 @@ humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' 
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
-// image.src= 'http://openweathermap.org/img/wn/' + serverRequest.weather[0].icon + ' .png'
+image.src= 'https://openweathermap.org/img/wn/.png'
+ + serverRequest.weather[0].icon
+
+
+
 };
 
 
