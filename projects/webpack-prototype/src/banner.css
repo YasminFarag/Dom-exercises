@@ -1,4 +1,4 @@
-.banner {
+/* .banner {
     position: fixed;
   
     background: #1a6db9;
@@ -9,8 +9,24 @@
 
 
     
-  }
+  } */
 
   body{
-    background-color: #ccc
+    background-color: #ccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
   }
+
+  *{
+
+    text-align: center;
+  }
+
+  input{
+  background-color: #ccc; 
+  height: 30px;
+    }
+
+    
