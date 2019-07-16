@@ -58,12 +58,12 @@ weatherDescription.innerText= result;
 
 
 tempreature.innerHTML=Math.floor
-(serverRequest.main.temp)
+(serverRequest.main.temp) + '&#8451'
 
 
-humidity.innerHTML= Math.floor(serverRequest.main.humidity) + ' humidity rate'
+humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' % '
 
-wind.innerHTML= Math.floor(serverRequest.wind.speed) + 'wind Speed'
+wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 };
 
 
