@@ -1,7 +1,7 @@
 let button = document.querySelector('#btn')
 button.addEventListener('click', ()=>{
   let city= document.querySelector('.inpt').value;
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=ac731e61d18f2ff0e0c877aef04eaf71`
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=ac731e61d18f2ff0e0c877aef04eaf71&units=metric`
   fetch(url)
   .then(function(resp) { return resp.json() })
 .then(function(data) {
@@ -44,17 +44,29 @@ function weatherdemo(serverRequest){
   } */
 
 
+console.log(serverRequest);
 
 
 
-let weatherDescription= document.querySelector('weatherdescription')
+let weatherDescription= document.querySelector('#weatherdescription')
 let humidity= document.querySelector('#humidty');
 let tempreature= document.querySelector('#tempreature');
 let wind= document.querySelector('#wind');
 
 let result = serverRequest.weather[0].description
-weatherDescription.innerText= result
+weatherDescription.innerText= result;
 
+
+tempreature.innerHTML=Math.floor
+(serverRequest.main.temp)
+
+
+humidity.innerHTML= Math.floor(serverRequest.main.humidity) + ' humidity rate'
+
+wind.innerHTML= Math.floor(serverRequest.wind.speed) + 'wind Speed'
 };
+
+
+
 
 
