@@ -41,8 +41,8 @@ function weatherdemo(serverRequest){
     container.style.borderRadius= '10%';
 
     //horizontal line
-    let line=document.querySelector('#line');
-    line.style.width= '250px';
+    /* let line=document.querySelector('#line');
+    line.style.width= '250px'; */
 
     break;
 
