@@ -93,8 +93,8 @@ humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' 
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
- image.src= 'https://openweathermap.org/img/wn/.png'
- + serverRequest.weather[0].icon
+ image.src= 'https://openweathermap.org/img/w/'
+ + serverRequest.weather[0].icon + ' .png'
 
 
 
