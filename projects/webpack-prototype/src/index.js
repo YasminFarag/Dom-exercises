@@ -29,7 +29,21 @@ function weatherdemo(serverRequest){
     break;
 
     case 'Clouds':
-    document.body.style.backgroundImage= 'url("./src/clouds.jpeg")'
+    document.body.style.backgroundImage= 'url("./src/clouds.jpeg")';
+    let container= document.querySelector('#container') ;
+    container.style.backgroundColor= 'grey';
+    container.style.width= '300px';
+    container.style.height= '200px';
+    container.style.opacity= '0.8';
+    container.style.marginLeft= '520px';
+    container.style.paddingTop= '30px';
+    container.style.color= 'whitesmoke';
+    container.style.borderRadius= '10%';
+
+    //horizontal line
+    let line=document.querySelector('#line');
+    line.style.width= '250px';
+
     break;
 
     case 'Rain':
@@ -55,13 +69,18 @@ function weatherdemo(serverRequest){
 console.log(serverRequest);
 
 
-
+let cityName= document.querySelector('#cityname')
 let weatherDescription= document.querySelector('#weatherdescription')
 let humidity= document.querySelector('#humidty');
 let tempreature= document.querySelector('#tempreature');
 let wind= document.querySelector('#wind');
 let image = document.querySelector('.img')
 
+// print city name
+cityName.innerHTML=serverRequest.name
+
+
+// weather description
 let result = serverRequest.weather[0].description
 weatherDescription.innerText= result;
 
@@ -74,8 +93,8 @@ humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' 
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
-image.src= 'https://openweathermap.org/img/wn/.png'
- + serverRequest.weather[0].icon
+// image.src= 'https://openweathermap.org/img/wn/.png'
+//  + serverRequest.weather[0].icon
 
 
 
