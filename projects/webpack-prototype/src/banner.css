@@ -12,7 +12,7 @@
   } */
 
   body{
-    background-color: #ccc;
+    background-image: url(./water-blue-ocean.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: black;
@@ -28,5 +28,10 @@
   background-color: #ccc; 
   height: 30px;
     }
+#container{
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
 
+}
     

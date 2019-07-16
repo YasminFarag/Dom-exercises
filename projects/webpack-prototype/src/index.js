@@ -13,35 +13,35 @@ button.addEventListener('click', ()=>{
 });
 
 function weatherdemo(serverRequest){
-  /* switch(serverRequest.weather[0].main){
+  switch(serverRequest.weather[0].main){
     case 'Clear':
-    document.body.style.backgroundColor= 'blue'
+    document.body.style.backgroundImage= 'url("./src/sunny.jpeg")'
     break;
 
     case 'Clouds':
-    document.body.style.backgroundImage= 'url("clouds.jpg")'
+    document.body.style.backgroundImage= 'url("./src/clouds.jpeg")'
     break;
 
     case 'Rain':
     case 'Drizzle':
     case 'Mist':
-    document.body.style.backgroundImage= 'url("rainy.jpg")'
+    document.body.style.backgroundImage= 'url("./src/cloudy.jpeg")'
     break;
 
     case 'thunderstorm':
-    document.body.style.backgroundImage= 'url("lightning.jpg")'
+    document.body.style.backgroundImage= 'url("./src/lightning.jpg")'
 
     break;
 
     case 'Snow':
-    document.body.style.backgroundImage= 'url("snowy.jpg")'
+    document.body.style.backgroundImage= 'url("./src/snowy.jpg")'
 
     break;
     default:
 
 
     break;
-  } */
+  }
 
 
 console.log(serverRequest);
