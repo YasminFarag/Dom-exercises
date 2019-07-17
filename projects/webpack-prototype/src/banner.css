@@ -39,6 +39,10 @@
  margin-right: 25px;
 
 }
+#humidty, #wind{
+  padding: 8px;
+
+}
 h1{
   font-size: 25px;
   font-style: oblique;
@@ -66,4 +70,8 @@ h1{
 }
 .hidden{
   display: none;
+}
+
+.oneline{
+  display: inline-flex;
 }

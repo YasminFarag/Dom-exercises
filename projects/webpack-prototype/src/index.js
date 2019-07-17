@@ -74,7 +74,13 @@ weatherDescription.innerText= result;
 
 
 tempreature.innerHTML=Math.floor
-(serverRequest.main.temp) + '&#8451'
+(serverRequest.main.temp) ;
+
+
+// Fahrenheit
+let temp = document.querySelector('#farenheit');
+      temp.innerHTML= Math.round(((parseFloat(serverRequest.main.temp)-273.15)*1.8)+32) + '&#x2109;'; 
+
 
 
 humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' % '
@@ -83,16 +89,13 @@ wind.innerHTML= 'Wind : ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
 image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x.png` 
 
-/* function loading(){
-  let img = document.querySelector('.img')
-  img.style.visibility= 'hidden'
-}
- */
 
- // Fahrenheit
-let fhButton= document.querySelector('.f').addEventListener('click', ()=>{
-  fhButton.innerHTML = Math.round(((parseFloat(serverRequest.main.temp)-273.15)*1.8)+32); 
-})
+ 
+/* let fhButton= document.querySelector('.f');
+    fhButton.addEventListener('click', (grade)=>{
+  grade.innerHTML = Math.round(((parseFloat(serverRequest.main.temp)-273.15)*1.8)+32); 
+});
+ */
 
 
  let hidden= document.querySelector('.hidden');
@@ -102,28 +105,21 @@ let fhButton= document.querySelector('.f').addEventListener('click', ()=>{
 
  
  let today= new Date();
- let weekDays= ["Sunday", "Monday", "Tuesday", "Wed", 'Thur', 'friday','saturday']
+ let weekDays= ["Sun", "Mon", "Tues", "Wed", 'Thur', 'Fri','Sat']
 let getDay= weekDays[today.getDay()] 
-console.log(getDay);
 
 // Month
 
 let months = ["jan", "feb", "mar", "apr", "May", 'June', 'July', 'August', 'September', 'November', 'December'];
 let getMonth= months[today.getMonth()]
-console.log(getMonth);
+
 
 // year
 let year = today.getFullYear();
-console.log(year);
 
 console.log(`${getDay} ${getMonth} ${year}`);
 let date = document.querySelector('#date');
  date.innerHTML= `${getDay} ${getMonth} ${year}` ;
-
-
-
-
-
 
 };  
 
@@ -136,7 +132,7 @@ function styling(){
     line.innerHTML='';
     container.style.backgroundColor= 'grey';
     container.style.width= '300px';
-    container.style.height= '220px';
+    container.style.height= 'max-content';
     container.style.opacity= '0.8';
     container.style.marginLeft= '520px';
     container.style.paddingTop= '30px';
