@@ -79,7 +79,7 @@ tempreature.innerHTML=Math.floor
 
 humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' % '
 
-wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
+wind.innerHTML= 'Wind : ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
 image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x.png` 
 
@@ -94,9 +94,9 @@ image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x
 
  // date
 
- //let today = document.querySelector('#date');
- today= new Date();
- let weekDays= ["Sunday", "monday", "tuesday", "wednesday", 'thursday', 'friday','saturday']
+ 
+ let today= new Date();
+ let weekDays= ["Sunday", "Monday", "Tuesday", "Wed", 'Thur', 'friday','saturday']
 let getDay= weekDays[today.getDay()] 
 console.log(getDay);
 
@@ -111,7 +111,8 @@ let year = today.getFullYear();
 console.log(year);
 
 console.log(`${getDay} ${getMonth} ${year}`);
-
+let date = document.querySelector('#date');
+ date.innerHTML= `${getDay} ${getMonth} ${year}` ;
 
 
 
@@ -132,7 +133,7 @@ function styling(){
     line.innerHTML='';
     container.style.backgroundColor= 'grey';
     container.style.width= '300px';
-    container.style.height= 'max-content';
+    container.style.height= '220px';
     container.style.opacity= '0.8';
     container.style.marginLeft= '520px';
     container.style.paddingTop= '30px';
