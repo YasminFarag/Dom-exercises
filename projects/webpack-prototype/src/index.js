@@ -4,33 +4,82 @@ let button = document.querySelector('#btn')
 button.addEventListener('click', ()=>{
   let city= document.querySelector('.inpt').value;
   let value = apiKey
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${value}&units=metric&units=imperial`
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${value}&units=metric`
   fetch(url)
   .then(function(resp) { return resp.json() })
 .then(function(data) {
   weatherdemo(data);
   console.log(data.main.temp)
-});
+})
+.catch(error =>{
+  console.log(error);
+  
 
+})
 
 });
 
 function weatherdemo(serverRequest){
   switch(serverRequest.weather[0].main){
 
-   /*  case 'default':
-    document.body.style.backgroundImage= 'url("./src/water")
-    break; */
-
-
     case 'Clear':
-    document.body.style.backgroundImage= 'url("./src/sunny.jpeg")'
+    document.body.style.backgroundImage= 'url("./src/sunny.jpeg")';
+    /* let container= document.querySelector('#container') ;
+    container.style.backgroundColor= 'grey';
+    container.style.width= '300px';
+    container.style.height= '200px';
+    container.style.opacity= '0.8';
+    container.style.marginLeft= '520px';
+    container.style.paddingTop= '30px';
+    container.style.color= 'whitesmoke';
+    container.style.borderRadius= '10%'; */
 
     break;
 
     case 'Clouds':
     document.body.style.backgroundImage= 'url("./src/clouds.jpeg")';
-    let container= document.querySelector('#container') ;
+    // let container= document.querySelector('#container') ;
+    // container.style.backgroundColor= 'grey';
+    // container.style.width= '300px';
+    // container.style.height= '200px';
+    // container.style.opacity= '0.8';
+    // container.style.marginLeft= '520px';
+    // container.style.paddingTop= '30px';
+    // container.style.color= 'whitesmoke';
+    // container.style.borderRadius= '10%';
+
+    //horizontal line
+    let line=document.querySelector('#line');
+    line.style.width= '250px';
+    line.style.color='black';
+    line.style.height= '10px';
+
+    break;
+
+    case 'Rain':
+    case 'Drizzle':
+    case 'Mist':
+    document.body.style.backgroundImage= 'url("./src/cloudy.jpeg")'
+
+    break;
+
+    case 'thunderstorm':
+    document.body.style.backgroundImage= 'url("./src/lightning.jpg")';
+    // let container= document.querySelector('#container') ;
+    /* container.style.backgroundColor= 'grey';
+    container.style.width= '300px';
+    container.style.height= '200px';
+    container.style.opacity= '0.8';
+    container.style.marginLeft= '520px';
+    container.style.paddingTop= '30px';
+    container.style.color= 'whitesmoke';
+    container.style.borderRadius= '10%'; */
+
+    break;
+
+    case 'Snow':
+    document.body.style.backgroundImage= 'url("./src/snowy.jpg")';
+    //let container= document.querySelector('#container') ;
     container.style.backgroundColor= 'grey';
     container.style.width= '300px';
     container.style.height= '200px';
@@ -40,31 +89,8 @@ function weatherdemo(serverRequest){
     container.style.color= 'whitesmoke';
     container.style.borderRadius= '10%';
 
-    //horizontal line
-    /* let line=document.querySelector('#line');
-    line.style.width= '250px'; */
-
-    break;
-
-    case 'Rain':
-    case 'Drizzle':
-    case 'Mist':
-    document.body.style.backgroundImage= 'url("./src/cloudy.jpeg")'
-    break;
-
-    case 'thunderstorm':
-    document.body.style.backgroundImage= 'url("./src/lightning.jpg")'
-
-    break;
-
-    case 'Snow':
-    document.body.style.backgroundImage= 'url("./src/snowy.jpg")'
-
     break;
     default:
-
-
-    break;
   }
 console.log(serverRequest);
 
@@ -93,8 +119,7 @@ humidity.innerHTML= 'Humidity: ' +  Math.floor(serverRequest.main.humidity) + ' 
 
 wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
- image.src= 'https://openweathermap.org/img/w/'
- + serverRequest.weather[0].icon + ' .png'
+ image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x.png` 
 
 
 
