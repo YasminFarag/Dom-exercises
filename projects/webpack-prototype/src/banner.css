@@ -75,3 +75,14 @@ h1{
 .oneline{
   display: inline-flex;
 }
+
+
+/*  MEDIA QUERIES */
+
+@media only screen and (max-width: 600px){
+  *{
+    text-align: center;
+  }
+
+  
+}
