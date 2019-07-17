@@ -20,65 +20,36 @@ button.addEventListener('click', ()=>{
 });
 
 function weatherdemo(serverRequest){
+
   switch(serverRequest.weather[0].main){
 
     case 'Clear':
     document.body.style.backgroundImage= 'url("./src/sunny.jpeg")';
-    let contain= document.querySelector('#container') ;
-    contain.style.backgroundColor= 'mediumblue';
-    contain.style.width= '300px';
-    contain.style.height= '200px';
-    contain.style.opacity= '0.5';
-    contain.style.marginLeft= '520px';
-    contain.style.paddingTop= '30px';
-    contain.style.color= 'black';
-    contain.style.borderRadius= '10%';
-
-
-   
-
+    styling();
+    
     break;
 
     case 'Clouds':
     document.body.style.backgroundImage= 'url("./src/clouds.jpeg")';
-    let container= document.querySelector('#container') ;
-    container.style.backgroundColor= 'grey';
-    container.style.width= '300px';
-    container.style.height= 'max-content';
-    container.style.opacity= '0.8';
-    container.style.marginLeft= '520px';
-    container.style.paddingTop= '30px';
-    container.style.color= 'whitesmoke';
-    container.style.borderRadius= '10%';
-
-    //horizontal line
-    /* let line=document.querySelector('#line');
-    line.style.width= '250px';
-    line.style.color='black';
-    line.style.height= '10px'; */
-
-
-    let line = document.querySelector('#line');
-    let created = document.createElement('HR');
+    styling();
     
-    line.appendChild(created);
-  
-
     break;
 
     case 'Rain':
     case 'Drizzle':
     case 'Mist':
     document.body.style.backgroundImage= 'url("./src/cloudy.jpeg")';
-    let con = document.querySelector('#container') ;
+    styling();
     break;
 
     case 'thunderstorm':
     document.body.style.backgroundImage= 'url("./src/lightning.jpg")';
+    styling()
     break;
 
     case 'Snow':
     document.body.style.backgroundImage= 'url("./src/snowy.jpg")';
+    styling();
 
     break;
     default:
@@ -112,29 +83,54 @@ wind.innerHTML= 'Wind Speed: ' + Math.floor(serverRequest.wind.speed) + ' km/hr'
 
 image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x.png` 
 
-
-
-
 /* function loading(){
   let img = document.querySelector('.img')
   img.style.visibility= 'hidden'
 }
-
-
  */
 
  let hidden= document.querySelector('.hidden');
  hidden.classList.toggle('hidden')
 
+ // date
+
+ //let today = document.querySelector('#date');
+ today= new Date();
+ let weekDays= ["Sunday", "monday", "tuesday", "wednesday", 'thursday', 'friday','saturday']
+let getDay= weekDays[today.getDay()] 
+console.log(getDay);
+
+// Month
+
+let months = ["jan", "feb", "mar", "apr", "May", 'June', 'July', 'August', 'September', 'November', 'December'];
+let getMonth= months[today.getMonth()]
+console.log(getMonth);
+
+// year
+let year = today.getFullYear();
+console.log(year);
+
+console.log(`${getDay} ${getMonth} ${year}`);
+
+
+
+
+
+
+
 };
 
+  
+  
 
-function styles(){
+function styling(){
 
-
-
+  let line = document.querySelector('#line');
+  
+ 
   let container= document.querySelector('#container') ;
-  container.style.backgroundColor= 'grey';
+    line.innerHTML='';
+    container.style.backgroundColor= 'grey';
     container.style.width= '300px';
     container.style.height= 'max-content';
     container.style.opacity= '0.8';
@@ -144,12 +140,9 @@ function styles(){
     container.style.borderRadius= '10%';
 
 
-  let line = document.querySelector('#line');
-  let created = document.createElement('HR');
-    
-    line.appendChild(created);
-  
-}
+ 
+    line.innerHTML= '<hr>';
+};
 
 
 

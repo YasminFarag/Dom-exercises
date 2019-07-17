@@ -1,15 +1,3 @@
-/* .banner {
-    position: fixed;
-  
-    background: #1a6db9;
-    color: white;
-  
-    padding: 25px;
-    
-
-
-    
-  } */
 
   body{
     background-image: url(./water-blue-ocean.jpg);
@@ -64,9 +52,7 @@ h1{
 
 .img{
   width: 40px;
-  height: 50px;
-  
-  
+  height: 50px; 
 }
 
 .display{
