@@ -89,6 +89,12 @@ image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x
 }
  */
 
+ // Fahrenheit
+let fhButton= document.querySelector('.f').addEventListener('click', ()=>{
+  fhButton.innerHTML = Math.round(((parseFloat(serverRequest.main.temp)-273.15)*1.8)+32); 
+})
+
+
  let hidden= document.querySelector('.hidden');
  hidden.classList.toggle('hidden')
 
@@ -119,10 +125,7 @@ let date = document.querySelector('#date');
 
 
 
-};
-
-  
-  
+};  
 
 function styling(){
 
@@ -144,7 +147,5 @@ function styling(){
  
     line.innerHTML= '<hr>';
 };
-
-
 
 
