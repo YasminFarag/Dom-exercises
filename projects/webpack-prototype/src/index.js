@@ -92,10 +92,10 @@ image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x
 
  
 /* let fhButton= document.querySelector('.f');
-    fhButton.addEventListener('click', (grade)=>{
-  grade.innerHTML = Math.round(((parseFloat(serverRequest.main.temp)-273.15)*1.8)+32); 
-});
- */
+    fhButton.addEventListener('click', ()=>{
+  temp.innerHTML = Math.round(((parseFloat(temp.innerHTML)-273.15)*1.8)+32); 
+}); */
+ 
 
 
  let hidden= document.querySelector('.hidden');
@@ -105,7 +105,8 @@ image.src= `http://openweathermap.org/img/wn/${serverRequest.weather[0].icon}@2x
 
  
  let today= new Date();
- let weekDays= ["Sun", "Mon", "Tues", "Wed", 'Thur', 'Fri','Sat']
+ let newDate= today.getDate()
+ let weekDays= ["Sun", "Mon", "Tue", "Wed", 'Thur', 'Fri','Sat']
 let getDay= weekDays[today.getDay()] 
 
 // Month
@@ -118,9 +119,34 @@ let getMonth= months[today.getMonth()]
 let year = today.getFullYear();
 
 console.log(`${getDay} ${getMonth} ${year}`);
-let date = document.querySelector('#date');
- date.innerHTML= `${getDay} ${getMonth} ${year}` ;
 
+
+// to print "st, nd ,rd and th in date"
+
+
+function format(num){
+  if(num >3 & num < 21)
+    return 'th'
+  
+  switch(num % 10){
+    case 1 :
+    return 'st';
+    case 2 :
+    return 'nd';
+    case 3 :
+    return 'rd';
+    default:
+    return 'th'
+  
+  }
+ 
+}
+let date = document.querySelector('#date');
+ date.innerHTML= getDay + ' ' +  newDate + format(newDate) + ' ' + getMonth+ ' ' + 
+
+ today.getFullYear();
+
+ 
 };  
 
 function styling(){
