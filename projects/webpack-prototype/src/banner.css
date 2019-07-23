@@ -4,6 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: black;
+    height: 100%;
 
   }
 
@@ -23,6 +24,7 @@
   font-style: italic;
    margin:40px;
    text-shadow: 1px 1px 1px black;
+   /* box-shadow: 1px 1px 5px black; */
   
   
 }
@@ -39,10 +41,10 @@
  margin-right: 25px;
 
 }
-#humidty, #wind{
+/* #humidty, #wind{
   padding: 8px;
 
-}
+} */
 h1{
   font-size: 25px;
   font-style: oblique;
@@ -79,10 +81,12 @@ h1{
 
 /*  MEDIA QUERIES */
 
-@media only screen and (max-width: 600px){
+@media screen and (min-width: 367px) and (max-width: 600px){
   *{
     text-align: center;
   }
 
-  
+  body{
+    height:auto;
+  }
 }
